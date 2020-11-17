@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1079</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>4243434</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>12</pointsize>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>My Game</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QTableWidget" name="historiqueTable">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>710</y>
+      <width>970</width>
+      <height>320</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableView{
+    border-radius: 5px;
+    border: 3px solid #408c99;
+}
+QScrollBar:vertical {
+   
+    background: #F5F5F5;
+    width: 15px;
+  
+}
+QScrollBar::handle:vertical {
+	border-radius: 7px;
+    background: #D3D3D3;
+ 	width: 15px;
+ 
+}
+
+QScrollBar::handle:vertical:hover {
+	border-radius: 7px;
+    background: #808080;
+ 	width: 15px;
+ 
+}
+
+QScrollBar::add-line:vertical {
+      border: none;
+      background: none;
+}
+
+QScrollBar::sub-line:vertical {
+      border: none;
+      background: none;
+}
+QTableWidget ::section { 
+  border-radius: 2px;
+color :#696969; 	font:  13pt 'Arial'; font-weight: bold;  border-top: 0px solid #d6d9dc;;
+border-left: 0px solid #d6d9dc;;
+border-right: 0px solid #d6d9dc;;
+ border-bottom: 1px solid #d6d9dc;
+height: 40px; } 
+
+QTableView::item {border-bottom: 1px solid #d6d9dc;}</string>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="showGrid">
+     <bool>false</bool>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>200</number>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>200</number>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderHighlightSections">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QListWidget" name="itemToChoose">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>700</y>
+      <width>600</width>
+      <height>170</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>600</width>
+      <height>170</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>420</width>
+      <height>105</height>
+     </size>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QAbstractScrollArea {
+    border-radius: 5px;
+    border: 3px solid #408c99;
+}
+QScrollBar:horizontal {
+   
+    background: #F5F5F5;
+    height: 15px;
+  
+}
+QScrollBar::handle:horizontal {
+	border-radius: 7px;
+    background: #D3D3D3;
+ 	width: 10px;
+ 
+}
+
+QScrollBar::handle:horizontal:hover{
+	border-radius: 7px;
+    background: #808080;
+ 	width: 10px;
+ 
+}
+
+QScrollBar::add-line:horizontal {
+      border: none;
+      background: none;
+}
+
+QScrollBar::sub-line:horizontal {
+      border: none;
+      background: none;
+}</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::MultiSelection</enum>
+    </property>
+    <property name="flow">
+     <enum>QListView::LeftToRight</enum>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="customersCombo">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>665</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListView { color: #696969;}
+QComboBox{ color : #696969;padding-left:  20px;  border-radius: 5px;
+    border: 3px solid #408c99;}
+
+
+
+QComboBox::down-arrow {
+    image: url(Data/Assets/items/down-arrow.png);
+    width: 16px;
+    height: 16px;
+	padding-right:  20px;
+}
+QComboBox::drop-down 
+{
+    border: 0px;
+}</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="itemsToBuy">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>193</y>
+      <width>600</width>
+      <height>170</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>600</width>
+      <height>170</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>420</width>
+      <height>110</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QAbstractScrollArea {
+    border-radius: 5px;
+    border: 3px solid #408c99;
+}
+QScrollBar:horizontal {
+   
+    background: #F5F5F5;
+    height: 15px;
+  
+}
+QScrollBar::handle:horizontal {
+	border-radius: 7px;
+    background: #D3D3D3;
+ 	width: 10px;
+ 
+}
+
+QScrollBar::handle:horizontal:hover{
+	border-radius: 7px;
+    background: #808080;
+ 	width: 10px;
+ 
+}
+
+QScrollBar::add-line:horizontal {
+      border: none;
+      background: none;
+}
+
+QScrollBar::sub-line:horizontal {
+      border: none;
+      background: none;
+}</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="flow">
+     <enum>QListView::LeftToRight</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="submitButton">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>900</y>
+      <width>250</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+
+            background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+            background-color:#599bb3;
+            border-radius:8px;
+            color:#ffffff;
+            padding:15px 15px;
+            text-decoration:none;
+           
+        }
+        QPushButton:hover {
+            background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+            background-color:#408c99;
+        }
+        QPushButton:active {
+            position:relative;
+            top:1px;
+        }</string>
+    </property>
+    <property name="text">
+     <string>Submit selection</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="correctItems">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>200</y>
+      <width>600</width>
+      <height>170</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>600</width>
+      <height>170</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>420</width>
+      <height>110</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QAbstractScrollArea {
+    border-radius: 5px;
+    border: 3px solid #408c99;
+}
+QScrollBar:horizontal {
+   
+    background: #F5F5F5;
+    height: 15px;
+  
+}
+QScrollBar::handle:horizontal {
+	border-radius: 7px;
+    background: #D3D3D3;
+ 	width: 10px;
+ 
+}
+
+QScrollBar::handle:horizontal:hover{
+	border-radius: 7px;
+    background: #808080;
+ 	width: 10px;
+ 
+}
+
+QScrollBar::add-line:horizontal {
+      border: none;
+      background: none;
+}
+
+QScrollBar::sub-line:horizontal {
+      border: none;
+      background: none;
+}</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="flow">
+     <enum>QListView::LeftToRight</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="score_icon">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>30</y>
+      <width>110</width>
+      <height>150</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Score</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="mainGame" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1920</width>
+      <height>1080</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <widget class="QPushButton" name="startButton">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>500</y>
+       <width>300</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+            background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+            background-color:#599bb3;
+            border-radius:8px;
+            color:#ffffff;
+            padding:15px 15px;
+            text-decoration:none;
+           
+        }
+        QPushButton:hover {
+            background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+            background-color:#408c99;
+        }
+        QPushButton:active {
+            position:relative;
+            top:1px;
+        }</string>
+     </property>
+     <property name="text">
+      <string>Start Game</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="character" native="true">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>450</y>
+      <width>381</width>
+      <height>551</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dialogue">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>200</y>
+      <width>371</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="text">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>250</y>
+      <width>231</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : rgb(255, 255, 255);
+</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="plainText">
+     <string>wcwsvcwc  dqsgsdgdsgsgsdgsdgsgsdgsgsgsdgsdgsgsgsgddddddddddddddddddqsdqsd
+</string>
+    </property>
+    <property name="backgroundVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="score">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>90</y>
+      <width>150</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> border-radius: 5px;
+ border: 3px solid #408c99;
+background-color : white;
+ color : gray; 	font:  13pt 'Arial'; 
+font-weight: bold;
+                       
+</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="next" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>450</y>
+      <width>451</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="nextButton">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>79</y>
+       <width>131</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{background-color: rgba(255, 255, 255, 0);
+
+   border-image: url(&quot;Data/Assets/items/next.png&quot;); 
+   border-width: 0px;
+	
+
+}
+
+QPushButton:hover {
+   
+   border-image: url(&quot;Data/Assets/items/hover_next.png&quot;); 
+   border-width: 0px;
+
+}
+
+QPushButton:pressed {
+   
+   border-image: url(&quot;Data/Assets/items/click_next.png&quot;); 
+   border-width: 0px;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lab">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>221</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 255, 255)</string>
+     </property>
+     <property name="text">
+      <string>NEXT CLIENT</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <zorder>dialogue</zorder>
+   <zorder>text</zorder>
+   <zorder>character</zorder>
+   <zorder>score</zorder>
+   <zorder>score_icon</zorder>
+   <zorder>itemsToBuy</zorder>
+   <zorder>customersCombo</zorder>
+   <zorder>historiqueTable</zorder>
+   <zorder>itemToChoose</zorder>
+   <zorder>submitButton</zorder>
+   <zorder>correctItems</zorder>
+   <zorder>mainGame</zorder>
+   <zorder>next</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
