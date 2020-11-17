@@ -2,11 +2,30 @@
  Supermarket game using an optimized implementation of Apriori algorithm in Python
 
 ## Table of contents
-* [Description](#desc)
+* [Description](#description)
 * [Technologies](#technologies)
-* [DataSet](#data)
-* [Usage](#data)
-  ** [Apriori Algorithm Test](#algo)
-    *** [Exemple](#exemple)
-  ** [Game Execution](#usage)
-    *** [Exemple](#exemple)
+* [DataSet](#dataset)
+* [Apriori Algorithm](#apriori-algorithm)
+  * [Test](#test)
+  * [Exemple](#exemple)
+* [Game](#game)
+  * [Execution](#execution)
+  * [Exemple](#exemple)
+
+# Description
+
+# Technologies
+
+# DataSet
+
+# Apriori Algorithm
+ 
+ ## Test
+ 
+ ## Exemple
+ 
+# Game
+
+## Execution
+
+## Exemple
