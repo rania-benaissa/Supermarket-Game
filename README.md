@@ -1,5 +1,5 @@
 # Supermarket Game
- Supermarket game using an optimized implementation of Apriori algorithm in Python
+ Supermarket game using an optimized implementation of **Apriori algorithm** in Python
 
 ## Table of contents
 * [Description](#description)
