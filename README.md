@@ -57,11 +57,13 @@ The  **Apriori algorithm**'s implementation is located in __*Algorithm* folder__
    ![itemset](/Readme_images/itemset_frequent_4_items.jpg)
 
      Instead of generating 14 association rules, the algorithm will only generate 10 that are considered **relevant**:
+     
    ![association_rules](/Readme_images/association_rules.jpg)
 
  ## Tests
 
  The results obtained by applying the algorithm on a dataset of 7500 transactions on 120 items are shown below:
+ 
  ![results](/Readme_images/results1.png)
 
  
