@@ -62,7 +62,7 @@ The  **Apriori algorithm**'s implementation is located in __*Algorithm* folder__
 
  ## Test
 
- The results obtained by applying the algorithm on a dataset of 7500 transactions on 120 items are shown below:
+ The results obtained by applying the algorithm on a dataset of 7500 transactions and 120 items are shown below:
  
  ![results](/Readme_images/results1.png)
 
