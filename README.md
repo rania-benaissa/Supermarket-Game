@@ -4,10 +4,10 @@
 ## Table of contents
 * [Description](#description)
 * [Technologies](#technologies)
-* [DataSet](#dataset)
+* [DataSets](#datasets)
 * [Apriori Algorithm](#apriori-algorithm)
-  * [Test](#test)
-  * [Exemple](#exemple)
+  * [Implementation](#test)
+  * [Test](#exemple)
 * [Game](#game)
   * [Execution](#execution)
   * [Exemple](#exemple)
@@ -60,7 +60,7 @@ The  **Apriori algorithm**'s implementation is located in __*Algorithm* folder__
      
    ![association_rules](/Readme_images/association_rules.jpg)
 
- ## Tests
+ ## Test
 
  The results obtained by applying the algorithm on a dataset of 7500 transactions on 120 items are shown below:
  
