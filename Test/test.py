@@ -31,11 +31,11 @@ items = constructItems(purchases)
 
 start = t.time()
 
-apriori = aPrioriAlgorithm(purchases, items, 0.01, 1, 0)
+apriori = aPrioriAlgorithm(purchases, items, 0.0045, 0.2, 3)
 apriori.run()
 
 end = t.time()
-print("--- %s secondes ---" % (end - start))
+print("--- %s seconds ---" % (end - start))
 
 # this function is to know if there s a redundant value in each row
 
