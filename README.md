@@ -49,20 +49,20 @@ The  **Apriori algorithm**'s implementation is located in __*Algorithm* folder__
 
 * To reduce the association rules number:
 
- * We will only consider frequent ItemSets made up of three to six items (1-items and 2-items are calculated but ignored).
+  * We will only consider frequent ItemSets made up of three to six items (1-items and 2-items are calculated but ignored).
 
- * We will only consider association rules which contains at least 2 antecedents.
+  * We will only consider association rules which contains at least 2 antecedents.
    For example if we take a frequent ItemSet made up of 4 items as shown in the following figure: 
 
    ![itemset](/Readme_images/itemset_frequent_4_items.jpg)
 
-   Instead of generating 14 association rules, the algorithm will only generate 10 that are considered **relevant**:
+     Instead of generating 14 association rules, the algorithm will only generate 10 that are considered **relevant**:
    ![association_rules](/Readme_images/association_rules.jpg)
 
  ## Tests
 
  The results obtained by applying the algorithm on a dataset of 7500 transactions on 120 items are shown below:
- ![results](/Readme_images/results1.jpg)
+ ![results](/Readme_images/results1.png)
 
  
  
