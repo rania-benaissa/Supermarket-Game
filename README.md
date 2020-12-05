@@ -4,10 +4,10 @@
 ## Table of contents
 * [Description](#description)
 * [Technologies](#technologies)
-* [DataSet](#dataset)
+* [DataSets](#datasets)
 * [Apriori Algorithm](#apriori-algorithm)
+  * [Implementation](#implementation)
   * [Test](#test)
-  * [Exemple](#exemple)
 * [Game](#game)
   * [Execution](#execution)
   * [Exemple](#exemple)
@@ -26,20 +26,20 @@ To run this game, install:
 
 # DataSets
 
-In _**Data** folder_ , you will find assets and datasets used in the game: 
-* _**Assets** folder_: contains images, backgrounds and icons.
-* _**customers.csv** file_: contains 6 characters with their corresponding image URL in _**Assets** folder_.
-* _**items.csv** file_: contains 42 items that are defined by their name and corresponding image URL in _**Assets** folder_.
-* _**transactions.csv** file_: contains 120 transaction.
+In __*Data* folder__ , you will find assets and datasets used in the game: 
+* __*Assets* folder__: contains images, backgrounds and icons.
+* __*customers.csv* file__: contains 6 characters with their corresponding image URL in __*Assets* folder__.
+* __*items.csv* file__: contains 42 items that are defined by their name and corresponding image URL in __*Assets* folder__.
+* __*transactions.csv* file__: contains 120 transaction.
 
-In _**Test** folder_, you will find datasets that are used to test the **Apriori algorithm**: 
+In __*Test* folder__, you will find datasets that are used to test the **Apriori algorithm**: 
 
-* _**store_data** file_: contains 7500 transactions on 120 items.
-* _**customers.csv** file_: contains 2000 transactions on 42 items.
+* __*store_data* file__: contains 7500 transactions on 120 items.
+* __*customers.csv* file__: contains 2000 transactions on 42 items.
 
 # Apriori Algorithm
 
-The  **Apriori algorithm**'s implementation is located in _**Algorithm** folder_.
+The  **Apriori algorithm**'s implementation is located in __*Algorithm* folder__.
 
 ## Implementation
 
@@ -49,20 +49,22 @@ The  **Apriori algorithm**'s implementation is located in _**Algorithm** folder_
 
 * To reduce the association rules number:
 
- * We will only consider frequent ItemSets made up of three to six items (1-items and 2-items are calculated but ignored).
+  * We will only consider frequent ItemSets made up of three to six items (1-items and 2-items are calculated but ignored).
 
- * We will only consider association rules which contains at least 2 antecedents.
+  * We will only consider association rules which contains at least 2 antecedents.
    For example if we take a frequent ItemSet made up of 4 items as shown in the following figure: 
 
    ![itemset](/Readme_images/itemset_frequent_4_items.jpg)
 
-   Instead of generating 14 association rules, the algorithm will only generate 10 that are considered **relevant**:
+     Instead of generating 14 association rules, the algorithm will only generate 10 rules that are considered **relevant**:
+     
    ![association_rules](/Readme_images/association_rules.jpg)
 
- ## Tests
+ ## Test
 
- The results obtained by applying the algorithm on a dataset of 7500 transactions on 120 items are shown below:
- ![results](/Readme_images/results1.jpg)
+ The results obtained by applying the algorithm on a dataset of 7500 transactions and 120 items are shown below:
+ 
+ ![results](/Readme_images/results1.png)
 
  
 # Game
