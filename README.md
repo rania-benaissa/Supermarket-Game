@@ -65,9 +65,38 @@ The  **Apriori algorithm**'s implementation is located in _**Algorithm** folder_
  ![results](/Readme_images/results1.jpg)
 
  
- 
 # Game
 
 ## Execution
 
+To start the game, run the *Application.py* file in **GUI folder** :
+
+![start](/Readme_images/start.png)
+
 ## Exemple
+
+* Once the game has started, the player takes on the role of cashier and sees various customers enter his supermarket.
+
+![selection](/Readme_images/selection.jpg)
+
+* The list in the upper right corner represents the purchased items and the items to guess.
+
+* To help the player make the right choices, he can consult each client's transactions list (list and comboBox located on the lower right corner).
+
+* The list on the lower left corner is a list of items among which figure the items to guess.
+
+* The player must choose as many items as it is missing and must submit his choices by clicking on 'Submit selection'.
+
+![response](/Readme_images/response.jpg)
+
+* When the player has submitted his choices, the purchases list will be updated.
+
+* The correct purchases list will appear in the upper left corner and its items will be compared to the items suggested by the player.
+
+* If the player makes at least one correct guess, the corresponding item will have a green background and the player will receive 200 success points for each correct prediction.
+
+* While if any chosen item is not among the correct purchases, it will have a red background.
+
+* If none of the chosen items is a correct guess, the customer will be disappointed.
+
+* Thus the player can move on to the next customer by clicking on the green arrow and the game will be restarted.
