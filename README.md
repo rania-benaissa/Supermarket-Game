@@ -3,8 +3,8 @@
 
 ## Table of contents
 
-* [Description](#description)
 * [Technologies](#technologies)
+* [DataSets](#datasets)
 * [Apriori Algorithm](#apriori-algorithm)
   * [Implementation](#implementation)
   * [Test](#test)
